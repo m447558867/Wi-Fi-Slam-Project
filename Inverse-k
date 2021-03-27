@@ -14,12 +14,22 @@ k_1 = [255;242;0];
 k_2 = [63;72;204];
 k_3 = [34;177;76];
 k_4 = [127;127;127];
+% dot_x = [];
+% dot_y = [];
+% dot_i = 1;
 for r=1:1:row
     for col=1:1:column
         if col ~= column
-        pix_i1 = [image_r(r,col);image_g(r,col);image_b(r,col)];
-        pix_i2 = [image_r(r,col+1);image_g(r,col+1);image_b(r,col+1)];
+        pix_1 = [image_r(r,col);image_g(r,col);image_b(r,col)];
+        pix_2 = [image_r(r,col+1);image_g(r,col+1);image_b(r,col+1)];
         end
         
+        if (pix_1 == k_0 & pix_2 == k_1)
+            dot_x = col
+            dot_y = -r
+            plot(dot_x, dot_y,'.b','markersize',15);
+            hold on;
+        end
     end
 end
+hold off;

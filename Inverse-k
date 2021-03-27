@@ -30,6 +30,34 @@ for r=1:1:row
             plot(dot_x, dot_y,'.b','markersize',15);
             hold on;
         end
+        
+        if (pix_1 == k_1 & pix_2 == k_0 | pix_1 == k_1 & pix_2 == k_2)
+            dot_x = col
+            dot_y = -r
+            plot(dot_x, dot_y,'.b','markersize',15);
+            hold on;
+        end
+        
+        if (pix_1 == k_2 & pix_2 == k_1 | pix_1 == k_2 & pix_2 == k_3)
+            dot_x = col
+            dot_y = -r
+            plot(dot_x, dot_y,'.b','markersize',15);
+            hold on;
+        end
+        
+        if (pix_1 == k_3 & pix_2 == k_2 | pix_1 == k_2 & pix_2 == k_4)
+            dot_x = col
+            dot_y = -r
+            plot(dot_x, dot_y,'.b','markersize',15);
+            hold on;
+        end
+        
+        if (pix_1 == k_4 & pix_2 == k_3)
+            dot_x = col
+            dot_y = -r
+            plot(dot_x, dot_y,'.b','markersize',15);
+            hold on;
+        end
     end
 end
 hold off;

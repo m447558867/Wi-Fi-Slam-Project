@@ -1,6 +1,7 @@
 # Wi-Fi-Slam-Project
 
 The Wifi-Slam project is the capstone from Ryerson Univeristy - MEC 825
+    Contributed by CY Cubic Team: Chin Ming Wong, Yi Gan, Yunfei Xie, Yujie Chen
 
 The girhub resources are all .m files (Running that on MATLAB)
 

@@ -1,0 +1,25 @@
+clc
+clear all
+
+original_picture = imread('F:\OneDrive - Ryerson University\Mechanical Engineering Undergraduate\4th Year Courses\MEC 825\Project\k-2.png');
+%imshow(original_picture);
+%title('原始图像的直方图')
+%分别读取R、G、B的值，1代表R，2代表G，3代表B
+image_r=original_picture(:,:,1);
+image_g=original_picture(:,:,2);
+image_b=original_picture(:,:,3);
+[row,column,dk] = size(original_picture)
+k_0 = [237;28;36];
+k_1 = [255;242;0];
+k_2 = [63;72;204];
+k_3 = [34;177;76];
+k_4 = [127;127;127];
+for r=1:1:row
+    for col=1:1:column
+        if col ~= column
+        pix_i1 = [image_r(r,col);image_g(r,col);image_b(r,col)];
+        pix_i2 = [image_r(r,col+1);image_g(r,col+1);image_b(r,col+1)];
+        end
+        
+    end
+end
